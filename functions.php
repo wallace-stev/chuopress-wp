@@ -3,17 +3,15 @@
 //Enqueuing styles
 function custom_styles() {
     //Registering
+    wp_register_style( 'Normalize', get_template_directory_uri().'/css/normalize.css', array(), null, 'all' );
     wp_register_style( 'Main', get_stylesheet_uri(), null, 'all' );
-    wp_register_style( 'BootStrap-CSS', get_template_directory_uri().'/css/bootstrap.min.css', array(), null, 'all' );
-    wp_register_style( 'LineIcons', get_template_directory_uri().'/fonts/LineIcons.min.css', array(), null, 'all' );
-    wp_register_style( 'Themify', get_template_directory_uri().'/css/themify-icons/themify-icons.css', array(), null, 'all' );
-    wp_register_style( 'Font-Awesome', get_template_directory_uri().'/css/fontawesome/css/font-awesome.min.css', array(), null, 'all' );
+    wp_register_style( 'BootStrap-CSS', get_template_directory_uri().'/frameworks/bootstrap/css/bootstrap.min.css', array(), null, 'all' );
+    wp_register_style( 'Font-Awesome', get_template_directory_uri().'/icons/fontawesome/css/fontawesome-all.min.css', array(), null, 'all' );
     wp_register_style( 'Navigation', get_template_directory_uri().'/css/navigation.css', array(), null, 'all' );
 
     //Using
+    wp_enqueue_style( 'Normalize' );
     wp_enqueue_style( 'BootStrap-CSS' );
-    wp_enqueue_style( 'LineIcons' );
-    wp_enqueue_style( 'Themify' );
     wp_enqueue_style( 'Font-Awesome' );
     wp_enqueue_style( 'Main' );
     wp_enqueue_style( 'Navigation' );
@@ -24,8 +22,8 @@ add_action( 'wp_enqueue_scripts', 'custom_styles');
 //Enqueuing scripts
 function custom_scripts() {
     //Registering Javascript files
-    wp_register_script( 'JQuery', get_template_directory_uri().'/js/jquery-3.2.1.min.js', array(), null, 'true' );
-    wp_register_script( 'BootStrap-JS', get_template_directory_uri().'/js/bootstrap/bootstrap.min.js', array(), null, 'true' );
+    wp_register_script( 'JQuery', get_template_directory_uri().'/frameworks/jquery-3.6.0.min.js', array(), null, 'true' );
+    wp_register_script( 'BootStrap-JS', get_template_directory_uri().'/frameworks/bootstrap/js/bootstrap.min.js', array(), null, 'true' );
     wp_register_script( 'Custom-JS', get_template_directory_uri().'/js/main.js', array(), null, 'true' );
 
     //Using Javascript files
