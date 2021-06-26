@@ -1,0 +1,564 @@
+/*Custom Fonts*/
+@font-face{
+    font-family: 'Oldeng';
+    src: url(fonts/OLD.ttf);
+}
+
+:root {
+    --theme-blue: #23427F;
+    --dark-blue: #1B3058;
+    --trans-blue: rgba(37, 46, 114, 0.75);
+    --theme-yellow: #ffb400;
+    --dark-yellow: #eba600;
+    --trans-yellow: rgba(219, 161, 13, 0.65);
+    --theme-red: #a41d31;
+}
+/*Online Application Button*/
+.apply-btn {
+    line-height: inherit !important;
+    background-color: var(--theme-red);
+    font-size: 15px;
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 5px;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+
+    animation-name: flash;
+	animation-duration: 0.8s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+
+	/*Firefox 1+*/
+	-webkit-animation-name: flash;
+	-webkit-animation-duration: 0.8s;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-iteration-count: infinite;
+
+	/*Safari 3-4*/
+	-moz-animation-name: flash;
+	-moz-animation-duration: 0.8s;
+	-moz-animation-timing-function: linear;
+	-moz-animation-iteration-count: infinite;
+}
+
+@keyframes flash {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.6; }
+    100% { opacity: 1.0; }
+}
+
+/*Firefox 1+*/
+@-webkit-keyframes flash {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.6; }
+    100% { opacity: 1.0; }
+}
+
+/*Safari 3-4*/
+@-moz-keyframes flash {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.6; }
+    100% { opacity: 1.0; }
+}
+
+.apply-btn:hover {
+    background-color: var(--dark-yellow);
+    animation: none;
+    color: #313131;
+    opacity: 0.9;
+    transform: scale(1.02);
+}
+
+@media screen and (max-width:1080px) {
+    .apply-btn {
+       margin-top: 50px; 
+    }
+}
+
+@media screen and (max-width:768px) {
+    .apply-btn {
+        margin-top: 40px; 
+     }
+}
+
+@media screen and (max-width:596px) {
+    .apply-btn {
+        margin-top: 30px;
+        font-size: 15px; 
+        letter-spacing: 1.2px;
+     }
+}
+
+@media screen and (max-width:480px) {
+    .apply-btn {
+        margin-top: 20px; 
+        font-size: 14px;
+     }
+}
+
+/*Search Form Styling Starts*/
+.search-field {
+    vertical-align: middle;
+    padding: 4px 5px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    margin: auto 5px auto 0;
+    width: 80%;
+}
+
+.search-submit {
+    background-color: var(--theme-red);
+    border: none;
+    padding: 4px 10px;
+    border-radius: 3px;
+    color: #fff;
+}
+
+.search-submit:hover {
+    background-color: var(--dark-yellow);
+    opacity: 0.8;
+    transform: scale(1.02);
+}
+
+.search-heading{
+    font-size: 30px;
+    border-bottom: groove 1px #313131;
+}
+
+.search-subheading {
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.result-items{
+    margin: 5px 0 18px 0;
+}
+
+.result-items p {
+    margin-top: 3px;
+    color: #313131;
+    margin-left: 3px;
+    margin-bottom: 0;
+}
+
+@media screen and (max-width:768px) {
+    .search-form {
+        width: 60%;
+        margin: auto 25%;
+    }
+
+    .search-heading{
+        font-size: 26px;
+    }
+
+    .result-items p {
+        margin-left: -10px;
+    }
+}
+
+@media screen and (max-width:596px) {
+    .search-form {
+        width: 70%;
+        margin: auto 21%;
+    }
+
+    .search-heading{
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width:480px) {
+    .search-form {
+        width: 100%;
+        margin: auto;
+    }
+}
+
+/*Search Form Styling Ends*/
+
+/*Form Download Buttons Starts*/
+.dwld-btn {
+    line-height: inherit !important;
+    background-color: var(--theme-yellow);
+    font-size: 15px;
+    color: var(--dark-blue);
+    font-weight: 700;
+    border-radius: 5px;
+    border:none;
+    width: 100%;
+}
+
+.dwld-btn:hover{
+    background-color: var(--dark-yellow);
+    color: #313131;
+    opacity: 0.9;
+    transform: scale(1.02);
+}
+
+.dwld-btn:focus {
+    background-color: var(--dark-yellow);
+}
+
+/*Navigation Menu styling*/
+.navbar {
+    min-height: 55px;
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+    border-bottom: 2px solid #f0f0f0;
+    z-index: 5;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: position 10s;
+    -ms-transition: position 10s;
+    -o-transition: position 10s;
+    transition: all 0.5s ease;
+}
+
+.navbar .navbar-brand {
+    padding: 0;
+}
+
+.navbar .img-responsive{
+    height: auto;
+    width: auto;
+    max-height: 50px;
+    max-width: 130px;
+}
+
+.navbar ul li {
+    padding: 0 8px 0 8px;
+}
+
+.navbar ul li a {
+    color: var(--theme-blue);
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.navbar ul .dropdown-menu {
+    margin-top: 10px;
+}
+
+.navbar ul .show {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.navbar ul .show li{
+    padding: 0;
+    min-width:250px;
+}
+
+.navbar ul .show li a {
+    padding: 15px 20px 15px 20px;
+    color: var(--theme-red);
+}
+
+.navbar ul .show li a:hover {
+    background-color: var(--theme-blue);
+    color: #fff;
+}
+
+.navbar ul .show li a:focus {
+    background-color: var(--theme-blue);
+}
+
+.navbar ul li a:hover{
+    color:var(--theme-red);
+}
+
+nav a:hover,
+nav a:focus {
+	outline: none;
+}
+
+.navbar ul li.current-menu-item a {
+    color: var(--theme-red);
+}
+
+@media screen and (max-width:1100px) {
+    .navbar ul li {
+        padding: 0 7px 0 7px;
+    }
+
+    .navbar ul li a {
+        font-size: 13.5px;
+        letter-spacing: 0;
+    }
+}
+
+@media screen and (max-width:1020px) {
+    .navbar ul li {
+        padding: 0 7px 0 7px;
+    }
+
+    .navbar ul li a {
+        font-size: 13px;
+        letter-spacing: 0;
+    }
+}
+
+@media screen and (max-width:980px) {
+    .navbar ul li {
+        padding: 0 6px 0 6px;
+    }
+}
+
+@media screen and (max-width:900px) {
+    .navbar ul li {
+        padding: 0 4px 0 4px;
+    }
+}
+
+/* The sticky class is added to the header with JS when it reaches its scroll position */
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    animation: smoothScroll 1s forwards;
+  }
+  
+  /* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+  .sticky + .content {
+    padding-top: 100px;
+  }
+
+  @keyframes smoothScroll {
+	0% {
+		transform: translateY(-40px);
+	}
+	100% {
+		transform: translateY(0px);
+	}
+}
+
+/*Navigation Menu Styling Ends*/
+
+/*Overlaying Logo Styling Starts*/
+
+.logo-overlay {
+    width: 5%;
+    height: 140px;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    z-index: 10;
+}
+
+.logo-overlay img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+}
+
+@media screen and (max-width:1400px){
+    .logo-overlay {
+        left: 7%;
+    }
+}
+
+@media screen and (max-width:1380px){
+    .logo-overlay {
+        left: 3%;
+    }
+}
+
+@media screen and (max-width:1300px){
+    .logo-overlay {
+        left: 4%;
+        width: 5%;
+    }
+}
+
+@media screen and (max-width:1270px){
+    .logo-overlay {
+        left: 4%;
+        width: 5.5%;
+    }
+}
+
+@media screen and (max-width:1220px){
+    .logo-overlay {
+        left: 4%;
+        width: 6%;
+    }
+}
+
+@media screen and (max-width:1223px){
+    .logo-overlay {
+        left: 3.8%;
+        width: 6.5%;
+    }
+}
+
+@media screen and (max-width:1198px){
+    .logo-overlay {
+        left: 3.5%;
+        width: 7.5%;
+    }
+}
+
+@media screen and (max-width:1170px){
+    .logo-overlay {
+        left: 3.5%;
+        width: 8%;
+    }
+}
+
+@media screen and (max-width:1100px){
+    .logo-overlay {
+        left: 3%;
+        width: 8.5%;
+    }
+}
+
+
+@media screen and (max-width:900px){
+    .logo-overlay {
+        left: 2%;
+        width: 8.5%;
+    }
+}
+
+@media screen and (max-width:800px){
+    .logo-overlay {
+        width: 7.5%;
+    }
+}
+
+/*Overlaying Logo Styling Ends*/
+
+/*Sidebar Styling For Posts & Pages*/
+.sidebar-text {
+    line-height: 1.5;
+    letter-spacing: 1px;
+    font-size: 14px;
+    font-weight: 600;
+    height: auto;
+}
+
+.sidebar-widget {
+    border-bottom: #949494 groove 1px;
+}
+
+.widget-title {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: 1px;
+}
+
+.sidebar-widget div a {
+    color: var(--theme-blue);
+}
+
+.sidebar-widget div a:hover {
+    color: var(--dark-yellow);
+}
+
+.sidebar-widget div a img{
+    width: 100%;
+    height: auto;
+}
+
+/*Sidebar Styling For Posts & Pages*/
+
+
+/*Styling Footer Quick Links Menu*/
+#menu-quick-links.menu{
+    padding: 0;
+}
+
+#menu-quick-links.menu li.menu-item{
+    list-style: none;
+    margin-bottom: 16px;
+    color: #bfbfd1;
+    margin-left: 4px;
+    font-weight: 700;
+}
+
+#menu-quick-links.menu li.menu-item:before{
+    content: "\00BB";
+}
+
+#menu-quick-links.menu li.menu-item a {
+    color: #bfbfd1;
+    font-weight: normal;
+    margin: 0 4px;
+    margin-left: 10px;
+    width: 100%;
+}
+
+#menu-quick-links.menu li.menu-item a:hover {
+    color: var(--dark-yellow)
+}
+
+/*Styling Footer Quick Links Menu Ends*/
+
+/*Styling External Links Menu Start*/
+#menu-external-links.menu {
+    padding: 0;
+}
+
+#menu-external-links.menu li.menu-item{
+    list-style: none;
+    margin-bottom: 3px;
+    margin-left: 10px;
+    color: var(--theme-blue);
+    font-weight: 700;
+}
+
+#menu-external-links.menu li.menu-item:before{
+    content: "\00BB";
+}
+
+#menu-external-links.menu li.menu-item a {
+    color: var(--theme-blue);
+    margin: 0 4px;
+    margin-left: 15px;
+    width: 100%;
+}
+
+#menu-external-links.menu li.menu-item a:hover {
+    color: var(--theme-red);
+}
+
+/*Styling External Links Menu Ends*/
+
+/*Styling the Essential Overlays Starts*/
+
+#menu-essentials.menu {
+    padding: 0;
+}
+
+#menu-essentials.menu li.menu-item{
+    list-style: none;
+    font-size: 14px;
+    margin-bottom: 3px;
+}
+
+#menu-essentials.menu li.menu-item a {
+    background-color: var(--theme-red);
+    color: white;
+    display: inline-block;
+    font-weight: 600;
+    width: 100%;
+    padding: 5px;
+    text-align: center;
+    border-radius: 3px;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+}
+
+#menu-essentials.menu li.menu-item a:hover {
+    background-color: var(--dark-blue);
+}
+
+/*Styling the Essential Overlays Ends*/
