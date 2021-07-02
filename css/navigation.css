@@ -1,45 +1,54 @@
-/*Custom Fonts*/
-@font-face{
-    font-family: 'Oldeng';
-    src: url(fonts/OLD.ttf);
+/*Import main stylesheet*/
+@import url(../style.css);
+
+
+/*Form Download Buttons Starts*/
+.dwld-btn {
+    background-color: var(--theme-yellow);
+    font-size: 14px;
+    color: var(--dark-blue);
+    font-weight: 700;
+    border-radius: 3px;
+    border:none;
+    width: 100%;
 }
 
-:root {
-    --theme-blue: #23427F;
-    --dark-blue: #1B3058;
-    --trans-blue: rgba(37, 46, 114, 0.75);
-    --theme-yellow: #ffb400;
-    --dark-yellow: #eba600;
-    --trans-yellow: rgba(219, 161, 13, 0.65);
-    --theme-red: #a41d31;
+.dwld-btn:hover{
+    background-color: var(--dark-yellow);
+    color: #313131;
+    opacity: 0.9;
+    transform: scale(1.02);
 }
+
+.dwld-btn:focus {
+    background-color: var(--dark-yellow);
+}
+
 /*Online Application Button*/
 .apply-btn {
-    line-height: inherit !important;
     background-color: var(--theme-red);
-    font-size: 15px;
+    font-size: 14px;
     color: white;
     font-weight: 700;
-    text-transform: uppercase;
-    border-radius: 5px;
+    border-radius: 3px;
     border: none;
     width: 100%;
     cursor: pointer;
 
     animation-name: flash;
-	animation-duration: 0.8s;
+	animation-duration: 1.2s;
 	animation-timing-function: linear;
 	animation-iteration-count: infinite;
 
 	/*Firefox 1+*/
 	-webkit-animation-name: flash;
-	-webkit-animation-duration: 0.8s;
+	-webkit-animation-duration: 1.2s;
 	-webkit-animation-timing-function: linear;
 	-webkit-animation-iteration-count: infinite;
 
 	/*Safari 3-4*/
 	-moz-animation-name: flash;
-	-moz-animation-duration: 0.8s;
+	-moz-animation-duration: 1.2s;
 	-moz-animation-timing-function: linear;
 	-moz-animation-iteration-count: infinite;
 }
@@ -70,33 +79,6 @@
     color: #313131;
     opacity: 0.9;
     transform: scale(1.02);
-}
-
-@media screen and (max-width:1080px) {
-    .apply-btn {
-       margin-top: 50px; 
-    }
-}
-
-@media screen and (max-width:768px) {
-    .apply-btn {
-        margin-top: 40px; 
-     }
-}
-
-@media screen and (max-width:596px) {
-    .apply-btn {
-        margin-top: 30px;
-        font-size: 15px; 
-        letter-spacing: 1.2px;
-     }
-}
-
-@media screen and (max-width:480px) {
-    .apply-btn {
-        margin-top: 20px; 
-        font-size: 14px;
-     }
 }
 
 /*Search Form Styling Starts*/
@@ -180,30 +162,13 @@
 
 /*Search Form Styling Ends*/
 
-/*Form Download Buttons Starts*/
-.dwld-btn {
-    line-height: inherit !important;
-    background-color: var(--theme-yellow);
-    font-size: 15px;
-    color: var(--dark-blue);
-    font-weight: 700;
-    border-radius: 5px;
-    border:none;
-    width: 100%;
-}
-
-.dwld-btn:hover{
-    background-color: var(--dark-yellow);
-    color: #313131;
-    opacity: 0.9;
-    transform: scale(1.02);
-}
-
-.dwld-btn:focus {
-    background-color: var(--dark-yellow);
-}
-
 /*Navigation Menu styling*/
+.contact-bar {
+    padding: 16px 0;
+    font-size: 14px;
+    font-weight: 500;
+}
+
 .navbar {
     min-height: 55px;
     display: flex;
@@ -230,15 +195,15 @@
 }
 
 .navbar ul li {
-    padding: 0 8px 0 8px;
+    padding: 0 6px 0 6px;
 }
 
 .navbar ul li a {
     color: var(--theme-blue);
+    font-family: 'Roboto', sans-serif;
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 700;
     text-decoration: none;
-    letter-spacing: 1px;
     text-transform: uppercase;
 }
 
@@ -290,7 +255,6 @@ nav a:focus {
 
     .navbar ul li a {
         font-size: 13.5px;
-        letter-spacing: 0;
     }
 }
 
@@ -301,7 +265,11 @@ nav a:focus {
 
     .navbar ul li a {
         font-size: 13px;
-        letter-spacing: 0;
+    }
+    
+    .contact-bar {
+        padding: 12px 0;
+        font-size: 13px;
     }
 }
 
@@ -314,6 +282,11 @@ nav a:focus {
 @media screen and (max-width:900px) {
     .navbar ul li {
         padding: 0 4px 0 4px;
+    }
+
+    .contact-bar {
+        padding: 10px 0;
+        font-size: 12px;
     }
 }
 
@@ -438,7 +411,6 @@ nav a:focus {
 /*Sidebar Styling For Posts & Pages*/
 .sidebar-text {
     line-height: 1.5;
-    letter-spacing: 1px;
     font-size: 14px;
     font-weight: 600;
     height: auto;
@@ -452,7 +424,6 @@ nav a:focus {
     font-size: 20px;
     font-weight: 700;
     line-height: 1.5;
-    letter-spacing: 1px;
 }
 
 .sidebar-widget div a {
