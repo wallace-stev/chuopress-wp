@@ -55,19 +55,24 @@
 <!--Hero Header & Forms End-->
 
 <!-- Intro Section Start-->
-<section class="bg-gray intro-sect">
+<section class="bg-gray py-5 px-2">
     <div class="container-fluid">
-        <div class="row px-3 mx-2">
-            <div class="col-md-4 px-0 bg-white">
-                <div>
-                    <?php get_search_form(  ); ?>
+        <div class="row mx-md-2 gx-md-5 justify-content-between">
+            <div class=" col-lg-4 col-md-5 px-lg-4 px-md-3">
+                <div class="intro-left-col bg-white py-5">
+                    <div>
+                        <?php get_search_form(  ); ?>
+                    </div>
                 </div>
+                
                 <div class="bg-theme text-white">
                     <h4>NEWS</h4>
                 </div>
             </div>
-            <div class="col-md-8">
-                <p>Leoani dsjfkdgnjkfhjsadsfjkgljkadf</p>
+            <div class="col-lg-8 col-md-7 px-lg-4 px-md-3">
+                <div class="intro-right-col bg-white py-5">
+                    <p>Leoani dsjfkdgnjkfhjsadsfjkgljkadf</p>
+                </div>
             </div>
         </div>
     </div>

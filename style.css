@@ -80,16 +80,12 @@ body{
   }
 
 /*Backgrounds*/
-.bg-white {
-    background-color: #fff!important;
-}
-
 .bg-footer {
     background-color: var(--dark-blue);
 }
 
 .bg-gray {
-    background-color: #F4F4F4;
+    background-color: #F7F7F7;
 }
 
 .bg-theme{
@@ -408,8 +404,8 @@ a.text-slight:hover {
 /*Page Styling Ends*/
 
 /*Homepage Intro Section Starts*/
-.intro-sect {
-    padding: 4em 0;
+.intro-left-col {
+    border-radius: 50%;
 }
 
 
